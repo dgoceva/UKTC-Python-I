@@ -1,11 +1,24 @@
 amount = float(input('Amount = '))
 money = input('Money = ')
+output = input('Output = ')
 
+result = amount
 if money == 'USD':
-    print('USD {0} = {1} BGN'.format(amount, round(amount*1.79549, 2)))
+    result *= 1.79549
 elif money == 'EUR':
-    print('EUR {0} = {1} BGN'.format(amount, round(amount*1.95583, 2)))
+    result *= 1.95583
 elif money == 'GBP':
-    print('GBP {0} = {1} BGN'.format(amount, round(amount*2.53405, 2)))
-else:
+    result *= 2.53405
+elif money != 'BGN':
     print('Error')
+
+if output == 'USD':
+    result /= 1.79549
+elif output == 'EUR':
+    result /= 1.95583
+elif output == 'GBP':
+    result /= 2.53405
+elif output != 'BGN':
+    print('Error')
+
+print('{2} {0} = {1} {3}'.format(amount, round(result, 2), money, output))
