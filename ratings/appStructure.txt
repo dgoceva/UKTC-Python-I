@@ -1,0 +1,25 @@
+* ratings
+|
++---* rating_app (application folder)
+|   |
+|   +--* migrations (includes files related to the migrations)
+|   |
+|   +--* templates
+|   |  |--*rating_app
+|   |  |  |--index.html
+|   |
+|   +--* static
+|   |  |--*rating_app
+|   |  |  |--empty-star.png
+|   |  |  |--full-star.png
+|   |  |  |--half-star.png
+|   |
+|   |--admin.py
+|   |--models.py
+|   |--urls.py
+|   |--views.py
+|
++---* ratings (project folder)
+|   |
+|   |--settings.py
+|   |--urls.py
