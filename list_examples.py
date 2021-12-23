@@ -32,7 +32,48 @@ print(ll)
 # del ll
 # print(ll)
 
-sum = 0
+# sum
+sum1 = 0
 for num in ll:
-    sum += num  # sum = sum + num
-print(sum)
+    sum1 += num  # sum = sum + num
+print(sum1)
+
+print(sum(ll, 0))
+
+# sum by condition
+sum1 = 0
+for num in ll:
+    if num % 2 == 0:
+        sum1 += num
+print(sum1)
+
+# count by condition
+cnt = 0
+for num in ll:
+    if num < 0:
+        cnt += 1
+print(cnt)
+
+# min
+minel = ll[0]
+for num in ll:
+    if num < minel:
+        minel = num
+print(minel)
+
+print(min(ll))
+print(max(ll))
+
+# max by condition
+init = False
+for num in ll:
+    if num % 2 != 0:
+        if not init:
+            init = True
+            maxel = num
+        elif num > maxel:
+            maxel = num
+if not init:
+    print('No odd number...')
+else:
+    print(maxel)
