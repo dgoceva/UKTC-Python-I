@@ -77,3 +77,42 @@ if not init:
     print('No odd number...')
 else:
     print(maxel)
+
+# average
+sum1 = 0
+for num in ll:
+    sum1 += num
+if len(ll) == 0:
+    print('No numbers...')
+else:
+    print('Average is ', sum1/len(ll))
+
+# average by condition
+sum1 = 0
+cnt = 0
+for num in ll:
+    if num < 0:
+        sum1 += num
+        cnt += 1
+if cnt == 0:
+    print('No negative values found')
+else:
+    print('Average for negative values is ', sum1/cnt)
+
+# generate list by condition
+result = []
+for num in ll:
+    result.append(num*num)
+print(ll)
+print(result)
+
+result = []
+for num in ll:
+    if abs(num) % 10 == 3:
+        result.append(num)
+print(result)
+
+ll.sort()
+print(ll)
+ll.sort(reverse=True)
+print(ll)
