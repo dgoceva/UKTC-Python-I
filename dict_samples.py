@@ -1,6 +1,6 @@
 import json
 
-d = dict()  # {} for empty set
+d = dict()
 # add/update
 d['1'] = 'Ivan Ivanov'
 d['2'] = 'Petyr Petrov'
@@ -35,9 +35,9 @@ print(d.pop('2', None))
 print(d)
 
 # json      <->     Python datatypes
-# object    <->     dictionary
+# object    <->     dict
 # array     <->     list
-# str       <->     string
+# string    <->     str
 # numerals  <->     int,float
 # null      <->     None
 # true      <->     True
@@ -49,4 +49,9 @@ f.close()
 # print(country[0])
 # print(country[0]['properties']['country'])
 for country in countries:
-    print(country)
+    # print(country)
+    # print(country['properties'])
+    if country['properties']['country'][0].upper() == 'B':
+        print(country['properties'])
+    if country['properties']['capital'][0].upper() == 'S':
+        print(country['properties'])
