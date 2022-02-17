@@ -1,3 +1,5 @@
+import numpy as np
+import matplotlib.pyplot as plt
 import math
 
 a = int(input('a= '))
@@ -19,3 +21,10 @@ else:
     xi = math.sqrt(math.fabs(d))
     print('x1= ' + str(xr)+'-i'+str(xi),
           'x2= '+str(xr)+'+i'+str(xi), sep='\n')
+
+xplt = np.arange(-20, 20, 1)
+yplt = a*xplt*xplt+b*xplt+c
+plt.plot(xplt, yplt, color='indigo')
+yplt = xplt**2
+plt.plot(xplt, yplt, color='yellowgreen')
+plt.show()
