@@ -24,7 +24,13 @@ else:
 
 xplt = np.arange(-20, 20, 1)
 yplt = a*xplt*xplt+b*xplt+c
-plt.plot(xplt, yplt, color='indigo')
+plt.plot(xplt, yplt, color='indigo', label='y=ax**2+bx+c')
 yplt = xplt**2
-plt.plot(xplt, yplt, color='yellowgreen')
+plt.plot(xplt, yplt, color='yellowgreen', label='y=x^2')
+yplt1 = xplt*a+b
+plt.plot(xplt, yplt1, color='cyan', label='y=ax+b')
+plt.legend(loc='upper right', frameon=False)
+plt.title('Графики на функции')
+plt.xlabel('X')
+plt.ylabel('Y', loc='top', rotation='horizontal')
 plt.show()
