@@ -37,3 +37,9 @@ t2 = (1, 2, 3, -1, -11, -3, 44)
 print(len(t2))
 print(max(t2))
 print(min(t2))
+
+t1 = (1, 2, 3, 4)
+a1, a2, a3, a4 = t1
+print(a1, a2, a3, a4)
+# a1, a2 = t1
+# print(a1, a2, a3, a4)
